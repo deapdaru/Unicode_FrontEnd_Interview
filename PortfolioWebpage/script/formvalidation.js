@@ -5,7 +5,8 @@ function validate() {
 
     var positionat = personEmail.indexOf("@");  
     var positiondot = personEmail.indexOf(".");
-    var letters = personName.match(/^[A-Za-z]+$/);
+    var noSpace = personName.replace(/ /g, "");
+    var letters = noSpace.match(/^[A-Za-z]+$/);
 
     if (document.getElementById("nameerror").style.display == "inline-block" && !(personName == null) && !(personName == "") && letters) {
         document.getElementById("nameerror").style.display = "none";

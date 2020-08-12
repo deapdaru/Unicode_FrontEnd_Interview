@@ -1,0 +1,267 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Merriweather', serif; */
+    font-family: 'Playfair Display', serif;
+    background-image: url("texture.jpg");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    background-color: white;
+    padding-bottom: 10px;
+}
+
+header {
+    padding: 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3.5em;
+    font-variant: small-caps;
+    transition: font-size 0.6s;
+}
+
+
+/* Vertical Nav Bar for mobile */
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    overflow: hidden;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+.navbar li a {
+    width: 100%;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    transition: background-color 0.6s;
+}
+
+.right {
+    width:100%;
+}
+
+.navbar li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.about h2 {
+    margin: 20px 30px;
+}
+
+.about h3 {
+    text-align: center;
+    padding: 10px;
+}
+
+.about h4 {
+    margin: 15px 30px;
+}
+
+.about img {
+    display: block;
+    max-width: 300px;
+    margin: auto;
+}
+
+.about p {
+    margin: 10px 30px;
+    text-align: justify;
+}
+
+
+/* Contact Buttons */
+
+#contact a {
+    display: inline-block;
+    margin: 10px 60px;
+    text-decoration: none;
+    text-align: center;
+    padding: 15px 20px;
+    width: 140px;;
+    border-radius: 15px;
+    transition: 0.6s;
+    box-shadow: 0 10px #888;
+}
+
+
+/* Contact Button Customizations */
+
+.linkedin {
+    border: 3px solid rgb(0, 119, 181);
+    color: rgb(0, 119, 181);
+}
+
+.linkedin:hover {
+    color: white;
+    background-color: rgb(0, 119, 181);
+}
+
+.github {
+    border: 3px solid #333;
+    color: #333;
+}
+
+.github:hover {
+    background-color: #333;
+    color: white;
+}
+
+.gmail {
+    border: 3px solid rgb(212, 70, 56);
+    color: rgb(212, 70, 56);
+}
+
+.gmail:hover {
+    background-color: rgb(212, 70, 56);
+    color: white;
+}
+
+.contactbtn {
+    border: 3px solid rgb(255, 200, 0);
+    color: rgb(255, 200, 0);
+}
+
+.contactbtn:hover {
+    background-color: rgb(255, 200, 0);
+    color: white;
+}
+
+#contact a:active {
+    box-shadow: 0 5px #555;
+    transform: translateY(4px);
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+footer address {
+    padding: 10px;
+}
+
+
+/* For tablets */
+
+@media only screen and (min-width: 600px) {
+    header {
+        padding: 40px;
+    }
+
+    main {
+        min-width: 600px;
+        padding-bottom: 20px;
+    }
+
+    header h1 {
+        font-size: 4em;
+    }
+
+    /* Horizontal Nav Bar for tablets and laptops */
+
+    .navbar li {
+        float: left;
+    }
+
+    .right {
+        width: auto;
+    }
+
+    .navbar li a {
+        width: auto;
+        padding: 20px;
+    }
+
+    .about h2 {
+        margin: 30px 40px;
+    }
+    
+    .about h3 {
+        padding: 15px;
+    }
+    
+    .about h4 {
+        margin: 15px 40px;
+    }
+    
+    .about img {
+        max-width: 400px;
+    }
+    
+    .about p {
+        margin: 15px 40px;
+    }
+}
+
+/* For laptops */
+
+@media only screen and (min-width: 800px) {
+    header {
+        padding: 50px;
+    }
+
+    main {
+        width: 80%;
+        min-width: 800px;
+        margin: auto;
+        border-style: solid;
+        border-color: #111;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+        padding-bottom: 30px;
+   }
+
+    header h1 {
+       font-size: 4.5em;
+    }
+
+    .navbar {
+        border: solid #111;
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+        border-radius: 6px 6px 0px 0px;
+    }
+
+    .about h2 {
+        margin: 50px 60px;
+    }
+    
+    .about h3 {
+        padding: 20px;
+    }
+    
+    .about h4 {
+        margin: 20px 60px;
+    }
+    
+    .about img {
+        max-width: 500px;
+    }
+    
+    .about p {
+        margin: 15px 60px;
+    }
+}

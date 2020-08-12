@@ -1,0 +1,239 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Merriweather', serif; */
+    font-family: 'Playfair Display', serif;
+    background-image: url("texture.jpg");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    padding: 30px;
+    transition: padding 0.6s;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3.5em;
+    font-variant: small-caps;
+    transition: font-size 0.6s;
+}
+
+main {
+    background-color: white;
+}
+
+
+/* Nav Bar */
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: #333;
+    transition: background-color 0.6s;
+    position: sticky;
+    position: -webkit-sticky; /* Safari */
+    top: 0;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+/* Form */
+
+form {
+    padding: 20px 30px;
+}
+
+fieldset {
+    padding: 20px;
+    background-color: #eee;
+    border-radius: 10px;
+}
+
+legend {
+    text-align: center;
+    font-size: 1em;
+    background-color: #ddd;
+    border: inherit;
+    border-radius: 10px;
+}
+
+label {
+    font-size: 1em;
+    display: inline-block;
+    width: 100%;
+}
+
+input, textarea {
+    width: 100%;
+    margin: 10px 0px;
+    padding: 10px;
+    outline: none;
+    border: 2px solid #bbb;
+    transition: border 0.6s, box-shadow 0.6s;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+input[type = text]:focus, textarea:focus {
+    border-color: #777;
+    box-shadow: 0 4px 10px 0 rgba(0, 120, 255, 0.1), 0 4px 10px 0 rgba(0, 120, 255, 0.1);
+}
+
+input[type = submit], input[type = reset] {
+    font-family: 'Playfair Display', serif;
+    font-size: 1em;
+    background-color: white;
+    transition: background-color 0.6s, color 0.6s;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+input[type = submit] {
+    border-color: limegreen;
+}
+
+input[type = reset] {
+    border-color: crimson;
+}
+
+input[type=submit]:hover, input[type = reset]:hover {
+    color: white;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: limegreen;
+}
+
+input[type = reset]:hover {
+    background-color: crimson;
+}
+
+
+/* Error message */
+
+form p {
+    display:none;
+    width:100%;
+    padding: 3px;
+    border: 1px solid red;
+    border-radius:5px;
+    background-color:#ffe6ff;
+    font-size: 0.6em;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 10px;
+}
+
+footer address {
+    padding: 10px;
+}
+
+
+/* For tablets */
+
+@media only screen and (min-width: 600px) {
+    header {
+        padding: 40px;
+    }
+
+    header h1 {
+        font-size: 4em;
+    }
+
+    main {
+        min-width: 600px;
+    }
+
+    form {
+        padding: 40px 60px;
+    }
+
+    fieldset {
+        padding: 30px;
+    }
+
+    legend {
+        font-size: 1.2em;
+    }
+
+    form p {
+        font-size: 0.8em;
+    }
+
+    footer {
+        padding: 20px;
+    }
+}
+
+
+/* For laptops */
+
+@media only screen and (min-width: 800px) {
+    header {
+        padding: 50px;
+    }
+
+    header h1 {
+        font-size: 4.5em;
+    }
+
+    main {
+        width: 80%;
+        min-width: 800px;
+        margin: auto;
+        border-style: solid;
+        border-color: #111;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    a {
+        border: solid #111;
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+        border-radius: 6px 6px 0px 0px;
+    }
+
+    form {
+        padding: 60px 120px;
+    }
+
+    fieldset {
+        padding: 40px;
+    }
+
+    legend {
+        font-size: 1.5em;
+    }
+
+    label {
+        font-size: 1.2em;
+    }
+
+    input[type = submit], input[type = reset] {
+        font-size: 1.2em;
+    }
+}

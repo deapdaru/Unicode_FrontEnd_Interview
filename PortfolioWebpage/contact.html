@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="name" content = "Deap Daru's Portfolio">
+    <meta name="description" content="My first webpage portfolio">
+    <meta name="author" content="Deap Daru">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
+
+    <script src = "script/formvalidation.js"></script>
+
+    <title>Portfolio's Contact Page</title>
+</head>
+
+<body>
+    <header>
+        <h1>Contact Me</h1>
+    </header>
+
+    <main>
+        <a href = "deapdaru.html">Go to Portfolio</a>
+    
+        <form name = "myForm"  onsubmit = "return validate();">
+            <fieldset>
+                <legend>Fill in these details:-</legend>
+
+                <label for = "name">Full Name<span style = "color:red;">*</span>:</label><br>
+                <input type = "text" id = "name" name = "fullname" placeholder = "Your fullname..."><br>
+                <p id = "nameerror"></p>
+
+                <label for = "email">Email Id.<span style = "color:red;">*</span>:</label><br>
+                <input type = "text" id = "email" name = "emailid" placeholder = "example@xyz.com"><br>
+                <p id = "emailerror"></p>
+
+                <label for = "phone">Phone Number<span style = "color:red;">*</span>:</label><br>
+                <input type = "text" id = "phone" name = "phonenum" placeholder = "10 digit phone number..."><br>
+                <p id = "numerror"></p>
+
+                <label for = "query">Query:<span style="font-size: 0.7em; float: right;margin-top: 5px;">(in 500 characters)</span></label><br>
+                <textarea id = "query" name = "qeury" maxlength = "500" placeholder = "Write your queries here..."></textarea><br>
+
+                <input type = "submit" value = "Submit">
+                <input type = "reset" value = "Reset" onclick='document.getElementById("nameerror").style.display = "none";document.getElementById("emailerror").style.display = "none";document.getElementById("numerror").style.display = "none";'>
+            </fieldset>
+        </form>
+    </main>
+
+    <footer>
+        <address>
+            Written and styled by:<br>
+            Deap Daru
+        </address>
+
+        <code>Copyright©</code>
+    </footer>
+</body>
+
+</html>

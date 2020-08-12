@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="name" content = "Worldwide Coronavirus Updates">
+    <meta name="description" content="Live count of increasing cases">
+    <meta name="author" content="Deap Daru">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap" rel="stylesheet">
+
+    <script src = "jsonapi.js"></script>
+
+    <title>Worldwide Coronavirus Count</title>
+</head>
+
+<body>
+    <header>
+        <h1>Coronavirus Updates</h1>
+        <p id = "lastupdate"></p>
+    </header>
+
+    <main>
+        <table>
+            <thead id = "tblhead">
+                <tr>
+                    <th style="left: 0;z-index: 2;" onclick = "sortKey('country_name');">Country</th>
+                    <th onclick = "sortKey('cases');">Total Cases</th>
+                    <th onclick = "sortKey('new_cases');">New Cases</th>
+                    <th onclick = "sortKey('deaths');">Total Deaths</th>
+                    <th onclick = "sortKey('new_deaths');">New Deaths</th>
+                    <th onclick = "sortKey('active_cases');">Active Cases</th>
+                    <th onclick = "sortKey('serious_critical');">Serious Cases</th>
+                    <th onclick = "sortKey('total_recovered');">Recovered Cases</th>
+                    <th onclick = "sortKey('total_cases_per_1m_population');">Total Cases / 1M population</th>
+                    <th onclick = "sortKey('deaths_per_1m_population');">Total Deaths / 1M population</th>
+                    <th onclick = "sortKey('total_tests');">Total Tests</th>
+                    <th onclick = "sortKey('tests_per_1m_population');">Total Tests / 1M population</th>
+                </tr>
+            </thead>
+
+            <tbody id = "tblbody1">
+
+            </tbody>
+
+            <tbody id = "tblbody2">
+
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <i>
+            Written and styled by:<br>
+            Deap Daru<br>
+        </i>
+        <code>Copyright©</code>
+    </footer>
+</body>
+
+</html>

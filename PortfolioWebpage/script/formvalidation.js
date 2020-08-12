@@ -5,6 +5,7 @@ function validate() {
 
     var positionat = personEmail.indexOf("@");  
     var positiondot = personEmail.indexOf(".");
+    var whiteSpaceEmail = personEmail.indexOf(" ");
     var noSpace = personName.replace(/ /g, "");
     var letters = noSpace.match(/^[A-Za-z]+$/);
 
@@ -12,7 +13,7 @@ function validate() {
         document.getElementById("nameerror").style.display = "none";
     }
 
-    if (document.getElementById("emailerror").style.display == "inline-block" && !(positionat < 1) && !(positiondot < positionat + 2) && !(positiondot + 2 >= personEmail.length)) {
+    if (document.getElementById("emailerror").style.display == "inline-block" && !(positionat < 1) && !(positiondot < positionat + 2) && !(positiondot + 2 >= personEmail.length) && whiteSpaceEmail == -1) {
         document.getElementById("emailerror").style.display = "none";
     }
 
@@ -30,7 +31,7 @@ function validate() {
         document.getElementById("nameerror").style.display = "inline-block";
         document.getElementById("nameerror").innerHTML = "Error: Enter alphabetical values only!"
         return false;
-    } else if (positionat < 1 || positiondot < positionat + 2 || positiondot + 2 >= personEmail.length){
+    } else if (positionat < 1 || positiondot < positionat + 2 || positiondot + 2 >= personEmail.length || whiteSpaceEmail != -1){
         document.getElementById("emailerror").style.display = "inline-block";
         document.getElementById("emailerror").innerHTML = "Error: Please enter a valid e-mail address!";  
         return false;  
